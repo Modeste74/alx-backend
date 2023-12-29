@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """defines a class on pagination"""
 import csv
-from typing import List, Dict, Optional
+from typing import List, Dict
 
 
 class Server:
@@ -33,7 +33,7 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: Optional[int] = None, page_size: int = 10) -> Dict:
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """two integer arguments: index with a None
         default value and page_size with default value of 10
         return a dictionary with the following key-value pairs"""
