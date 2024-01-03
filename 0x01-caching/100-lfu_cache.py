@@ -32,6 +32,8 @@ class LFUCache(BaseCaching):
             self.usage_order[key] = None
 
     def get(self, key):
+        """retrieves value associated with key whilst
+        also update the frequency in""""
         if key is None or key not in self.cache_data:
             return None
         self.frequency[key] += 1
@@ -39,6 +41,8 @@ class LFUCache(BaseCaching):
         return self.cache_data[key]
 
     def remove_lfu(self):
+        """discards the data with the least frequency of usage
+        from the caching system"""
         min_freq = min(self.frequency.values())
         min_f = [k for k, v in self.frequency.items() if v == min_freq]
         if len(min_f) > 1:
