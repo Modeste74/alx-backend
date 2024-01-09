@@ -24,8 +24,8 @@ def get_locale():
 @app.route('/')
 def index():
     """displays a simple index with some text"""
-    greeting = _('Hello world')
-    heading = _('Welcome to Holberton')
+    greeting = _('home_header')
+    heading = _('home_title')
     return render_template('1-index.html', greeting=greeting, heading=heading)
 
 
