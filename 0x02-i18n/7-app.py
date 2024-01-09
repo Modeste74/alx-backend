@@ -75,13 +75,10 @@ def get_timezone() -> str:
 @app.route('/')
 def index():
     """displays a simple index with some text"""
-    if g.user:
-        found_user = f"Logged in as {g.user['name']}"
-    found_user = _("Not logged in")
     greeting = _('home_header')
     heading = _('home_title')
     return render_template('6-index.html', greeting=greeting,
-                           heading=heading, found_user=found_user)
+                           heading=heading, users=users)
 
 
 if __name__ == '__main__':
