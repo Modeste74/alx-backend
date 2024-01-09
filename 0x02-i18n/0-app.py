@@ -11,7 +11,7 @@ def index():
     """displays a simple index with some text"""
     greeting = "Hello world"
     heading = "Welcome to Holberton"
-    return render_template('0-index.html', greeting=greeting, heading=heading)
+    return render_template('1-index.html', greeting=greeting, heading=heading)
 
 
 if __name__ == '__main__':
