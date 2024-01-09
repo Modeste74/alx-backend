@@ -15,7 +15,6 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-
 @app.route('/')
 def index():
     """displays a simple index with some text"""
