@@ -5,7 +5,11 @@
     <title>{{ heading }}</title>
 </head>
 <body>
-	<h1>{{ greeting }}</h1>
-	<p>{{ found_user }}</p>
+     <h1>{{ greeting }}</h1>
+     {% if g.user %}
+         <p>{{ _('logged_in_as', username=g.user.get('name','')) }} </p>
+     {% else %}
+         <p>{{ _('not_logged_in') }} </p>
+     {% endif %}
 </body>
 </html>
