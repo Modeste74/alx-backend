@@ -51,8 +51,8 @@ def index():
     if g.user:
         found_user = f"Logged in as {g.user['name']}"
     found_user = _("Not logged in")
-    greeting = _('Hello world')
-    heading = _('Welcome to Holberton')
+    greeting = _('home_header')
+    heading = _('home_title')
     return render_template('5-index.html', greeting=greeting,
                            heading=heading, found_user=found_user)
 
