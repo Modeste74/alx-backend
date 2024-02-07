@@ -1,8 +1,8 @@
 import redis from 'redis';
+import  { promisify } from 'util';
 
-const util = require('util');
 const client = redis.createClient();
-const getAsync = util.promisify(client.get).bind(client);
+const getAsync = promisify(client.get).bind(client);
 
 client.on('connect', () => {
   console.log('Redis client connected to the server');
